@@ -1,0 +1,13 @@
+GET http://localhost:8080/ava_tux.jpg
+###
+POST http://localhost:8080
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="ava_tux.jpg"
+
+< client/ava_tux.jpg
+
+--WebAppBoundary--
+###
+PUT http://localhost:8080

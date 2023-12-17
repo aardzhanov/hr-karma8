@@ -1,0 +1,5 @@
+{
+  "base_dir": "/tmp/serverA/",
+  "listen" : ":8080",
+  "storage_servers": ["localhost:8081","localhost:8082","localhost:8083","localhost:8084","localhost:8085","localhost:8086"]
+}

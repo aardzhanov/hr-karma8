@@ -1,0 +1,4 @@
+{
+  "base_dir": "/tmp/serverB6/",
+  "listen" : ":8086"
+}

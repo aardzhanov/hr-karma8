@@ -1,0 +1,10 @@
+GET http://localhost:8081/ava_tux2.jpg
+###
+
+PUT http://localhost:8081
+
+###
+POST http://localhost:8081/test2/ava_tux.jpg
+
+< client/ava_tux.jpg
+
