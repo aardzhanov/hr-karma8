@@ -45,11 +45,13 @@ func (sc *ConfigFile) serverBHandler(w http.ResponseWriter, r *http.Request) {
 		if err != nil {
 			log.Println("Can not create directory")
 			w.WriteHeader(http.StatusInternalServerError)
+			return
 		}
 		file, err := os.OpenFile(filepath.Join(sc.BaseDir, r.URL.Path), os.O_WRONLY|os.O_CREATE, os.ModePerm)
 		if err != nil {
 			log.Println("Can not create new file")
 			w.WriteHeader(http.StatusInternalServerError)
+			return
 		}
 		defer file.Close()
 
@@ -57,6 +59,7 @@ func (sc *ConfigFile) serverBHandler(w http.ResponseWriter, r *http.Request) {
 		if err != nil {
 			log.Println("Can not write file")
 			w.WriteHeader(http.StatusInternalServerError)
+			return
 		}
 
 		w.WriteHeader(http.StatusOK)
